@@ -3,10 +3,11 @@ var router = express.Router();
 
 var bookController = require('../controllers/books');
 
+// Consistent param name (id)
 router.get('/', bookController.getAll);
 router.post('/', bookController.create);
 router.get('/:id', bookController.getBook);
-router.put('/:bookId', bookController.update);
-router.delete('/:bookId', bookController.remove);
+router.put('/:id', bookController.update);
+router.delete('/:id', bookController.remove);
 
 module.exports = router;
